@@ -1,18 +1,58 @@
 .landing{
     height: 100vh;
     overflow: hidden;
-    background-image: url('../media/yoav-aziz-tKCd-IWc4gI-unsplash.jpg');
-    background-position: 10%;
+    background-image: url('../media/su-san-lee-E_eWwM29wfU-unsplash.jpg');
+    background-position: 85%;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    background-size: cover;
 }
 
-.landing-pic{
-    position: absolute;
+.landing-content{
     height: 100%;
-    // width: 100%;
-    z-index: -1;
-    // width: 100%;
-    overflow: hidden;
+    background: black;
+    clip-path: polygon(0px 0px, 100% 0px, 100% 25%, 0% 60%);
 }
 
+.landing-content p{
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 78px;
+    text-align: center;
+    margin: 0;
+    // top: 2.5%;
+    position: relative;
+}
+  
+.landing-arrow{
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+}
+.landing-arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #FF0000;
+    border-right: 5px solid #FF0000;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+.landing-arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
