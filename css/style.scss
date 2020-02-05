@@ -3,6 +3,10 @@
 @import "_landing.scss";
 @import "_nav.scss";
 
+html::-webkit-scrollbar {
+    display: none;
+}
+
 // set & forget
 body{
     padding: 0;
