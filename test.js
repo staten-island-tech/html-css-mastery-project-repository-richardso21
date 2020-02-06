@@ -4,8 +4,8 @@ window.onload = function(){
 }
 
 function welcomefunction() {
-  const welcome = document.querySelectorAll(".welcome-intro path");
-  // console.log(welcome);
+  const welcome = document.querySelectorAll(".loading-svg circle");
+  console.log(welcome);
   for (let i = 0; i < welcome.length; i++) {
     console.log(`Letter ${i} is ${welcome[i].getTotalLength()}`);
   }

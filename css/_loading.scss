@@ -12,4 +12,35 @@
     left: 50%;
     transform: translate(-50%,-50%);
     // z-index: 2;
+    animation: fill-in 0.5s ease forwards 1.05s,
+               zoom 1.5s ease forwards;
+}
+
+// @keyframes zoom{
+//     to {
+
+//     }
+// }
+
+@keyframes fill-in {
+    from {
+      fill: transparent;
+    }
+    to {
+      fill: red;
+    }
+  }
+
+.loading-svg circle{
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-dasharray: 989px;
+    stroke-dashoffset: 989px;
+    animation: line-anim 1.25s ease forwards;
+}
+
+@keyframes line-anim{
+    to{
+        stroke-dashoffset: 0px;
+    }
 }
