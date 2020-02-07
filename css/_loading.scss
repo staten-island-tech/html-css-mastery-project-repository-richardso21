@@ -4,6 +4,8 @@
     width: 100%;
     z-index: 2;
     background: black;
+    animation: fade-out 1s ease forwards 2.5s,
+               display-none 1s ease forwards 2.5s;
 }
 
 .loading-svg{
@@ -13,14 +15,30 @@
     transform: translate(-50%,-50%);
     // z-index: 2;
     animation: fill-in 0.5s ease forwards 1.05s,
-               zoom 1.5s ease forwards;
+               zoom 1.5s ease forwards,
+               zoom-even-more 1s ease forwards 1.75s,
+               overflow 2s ease forwards,
+               fade-out 1s ease forwards 2.5s
+               ;
 }
 
-// @keyframes zoom{
-//     to {
+@keyframes zoom{
+    to {
+        height: 75%;
+        width: 75%;
+    }
+}
 
-//     }
-// }
+@keyframes zoom-even-more{
+    from {
+        height: 75%;
+        width: 75%;
+    }
+    to {
+        height: 250%;
+        width: 250%;
+    }
+}
 
 @keyframes fill-in {
     from {
@@ -31,12 +49,36 @@
     }
   }
 
+@keyframes overflow {
+    from {
+        overflow: hidden;
+    }
+    to {
+        overflow: scroll;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes display-none {
+    to {
+        display: none;
+    }
+}
+
 .loading-svg circle{
     stroke-linejoin: round;
     stroke-linecap: round;
     stroke-dasharray: 989px;
     stroke-dashoffset: 989px;
-    animation: line-anim 1.25s ease forwards;
+    animation: line-anim 1.25s ease forwards,
 }
 
 @keyframes line-anim{
