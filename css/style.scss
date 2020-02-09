@@ -9,7 +9,11 @@ html::-webkit-scrollbar {
 
 html{
     scrollbar-width: none; //for firefox
+}
+
+.master{
     overflow-x: hidden;
+    position: relative;
 }
 
 
