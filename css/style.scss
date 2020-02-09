@@ -7,6 +7,12 @@ html::-webkit-scrollbar {
     display: none;
 }
 
+html{
+    scrollbar-width: none; //for firefox
+    overflow-x: hidden;
+}
+
+
 // set & forget
 body{
     padding: 0;

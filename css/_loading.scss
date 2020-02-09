@@ -4,8 +4,7 @@
     width: 100%;
     z-index: 2;
     background: black;
-    animation: fade-out 1s ease forwards 2.5s,
-               display-none 1s ease forwards 2.5s;
+    animation: fade-out 1s ease forwards 2.5s;
 }
 
 .loading-svg{
@@ -18,8 +17,7 @@
                zoom 1.5s ease forwards,
                zoom-even-more 1s ease forwards 1.75s,
                overflow 2s ease forwards,
-               fade-out 1s ease forwards 2.5s
-               ;
+               fade-out 1s ease forwards 2.5s;
 }
 
 @keyframes zoom{
@@ -64,12 +62,6 @@
     }
     to {
         opacity: 0;
-    }
-}
-
-@keyframes display-none {
-    to {
-        display: none;
     }
 }
 
