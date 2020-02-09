@@ -252,11 +252,7 @@ html::-webkit-scrollbar {
 
 html {
   scrollbar-width: none;
-}
-
-.master {
   overflow-x: hidden;
-  position: relative;
 }
 
 body {
