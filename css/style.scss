@@ -1,7 +1,9 @@
 // imports
 @import "_loading.scss";
 @import "_landing.scss";
+@import "_content.scss";
 @import "_nav.scss";
+
 
 html::-webkit-scrollbar {
     display: none;
@@ -24,9 +26,4 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
     // overflow-y: hidden;
-}
-
-.block-culture{
-    background-color: white;
-    height: 100vh;
 }

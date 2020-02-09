@@ -4,7 +4,19 @@
     width: 100%;
     z-index: 2;
     background: black;
-    animation: fade-out 1s ease forwards 2.5s;
+    animation: fade-out 0.25s ease forwards 1.75s,
+               box-none 0s ease forwards 2s;
+}
+
+@keyframes box-none{ //necessary so webpage doesn't reload below landing pg
+    from {
+        height: 100%;
+        width: 100%;
+    }
+    to {
+        height: 0;
+        width: 0;
+    }
 }
 
 .loading-svg{
@@ -13,25 +25,32 @@
     left: 50%;
     transform: translate(-50%,-50%);
     // z-index: 2;
-    animation: fill-in 0.5s ease forwards 1.05s,
-               zoom 1.5s ease forwards,
-               zoom-even-more 1s ease forwards 1.75s,
-               overflow 2s ease forwards,
-               fade-out 1s ease forwards 2.5s;
+    animation: fill-in 0.5s ease forwards 1s,
+            //    zoom 1.05s ease forwards,
+            //    zoom-even-more .75s ease forwards 1.5s,
+               zoom-fixed 1.75s cubic-bezier(.54,.36,1,-0.33) forwards,
+               fade-out 0.25s ease forwards 1.75s;
 }
 
-@keyframes zoom{
-    to {
-        height: 75%;
-        width: 75%;
-    }
-}
+// @keyframes zoom{
+//     to {
+//         height: 75%;
+//         width: 75%;
+//     }
+// }
 
-@keyframes zoom-even-more{
-    from {
-        height: 75%;
-        width: 75%;
-    }
+// @keyframes zoom-even-more{
+//     from {
+//         height: 75%;
+//         width: 75%;
+//     }
+//     to {
+//         height: 250%;
+//         width: 250%;
+//     }
+// }
+
+@keyframes zoom-fixed{
     to {
         height: 250%;
         width: 250%;
@@ -46,15 +65,6 @@
       fill: red;
     }
   }
-
-@keyframes overflow {
-    from {
-        overflow: hidden;
-    }
-    to {
-        overflow: scroll;
-    }
-}
 
 @keyframes fade-out {
     from {

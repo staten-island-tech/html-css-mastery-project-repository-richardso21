@@ -4,8 +4,30 @@
   width: 100%;
   z-index: 2;
   background: black;
-  -webkit-animation: fade-out 1s ease forwards 2.5s;
-          animation: fade-out 1s ease forwards 2.5s;
+  -webkit-animation: fade-out 0.25s ease forwards 1.75s, box-none 0s ease forwards 2s;
+          animation: fade-out 0.25s ease forwards 1.75s, box-none 0s ease forwards 2s;
+}
+
+@-webkit-keyframes box-none {
+  from {
+    height: 100%;
+    width: 100%;
+  }
+  to {
+    height: 0;
+    width: 0;
+  }
+}
+
+@keyframes box-none {
+  from {
+    height: 100%;
+    width: 100%;
+  }
+  to {
+    height: 0;
+    width: 0;
+  }
 }
 
 .loading-svg {
@@ -14,40 +36,18 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-animation: fill-in 0.5s ease forwards 1.05s, zoom 1.5s ease forwards, zoom-even-more 1s ease forwards 1.75s, overflow 2s ease forwards, fade-out 1s ease forwards 2.5s;
-          animation: fill-in 0.5s ease forwards 1.05s, zoom 1.5s ease forwards, zoom-even-more 1s ease forwards 1.75s, overflow 2s ease forwards, fade-out 1s ease forwards 2.5s;
+  -webkit-animation: fill-in 0.5s ease forwards 1s, zoom-fixed 1.75s cubic-bezier(0.54, 0.36, 1, -0.33) forwards, fade-out 0.25s ease forwards 1.75s;
+          animation: fill-in 0.5s ease forwards 1s, zoom-fixed 1.75s cubic-bezier(0.54, 0.36, 1, -0.33) forwards, fade-out 0.25s ease forwards 1.75s;
 }
 
-@-webkit-keyframes zoom {
-  to {
-    height: 75%;
-    width: 75%;
-  }
-}
-
-@keyframes zoom {
-  to {
-    height: 75%;
-    width: 75%;
-  }
-}
-
-@-webkit-keyframes zoom-even-more {
-  from {
-    height: 75%;
-    width: 75%;
-  }
+@-webkit-keyframes zoom-fixed {
   to {
     height: 250%;
     width: 250%;
   }
 }
 
-@keyframes zoom-even-more {
-  from {
-    height: 75%;
-    width: 75%;
-  }
+@keyframes zoom-fixed {
   to {
     height: 250%;
     width: 250%;
@@ -69,24 +69,6 @@
   }
   to {
     fill: red;
-  }
-}
-
-@-webkit-keyframes overflow {
-  from {
-    overflow: hidden;
-  }
-  to {
-    overflow: scroll;
-  }
-}
-
-@keyframes overflow {
-  from {
-    overflow: hidden;
-  }
-  to {
-    overflow: scroll;
   }
 }
 
@@ -246,6 +228,13 @@
   }
 }
 
+.content-blocks {
+  background-color: black;
+  height: 100vh;
+  -webkit-box-shadow: 0 0 20px black;
+          box-shadow: 0 0 20px black;
+}
+
 html::-webkit-scrollbar {
   display: none;
 }
@@ -259,10 +248,5 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
-}
-
-.block-culture {
-  background-color: white;
-  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */
