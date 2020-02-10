@@ -1,11 +1,22 @@
+html{
+    overflow: hidden;
+    animation: prevent-scroll 0s ease forwards 2s;
+}
+
+@keyframes prevent-scroll{
+    to {
+        overflow: scroll;
+    }
+}
+
 .loading{
     position: absolute;
     height: 100%;
     width: 100%;
     z-index: 2;
     background: black;
-    animation: fade-out 0.25s ease forwards 1.75s,
-               box-none 0s ease forwards 2s;
+    animation: fade-out 1s ease forwards 2s,
+               box-none 0s ease forwards 3s;
 }
 
 @keyframes box-none{ //necessary so webpage doesn't reload below landing pg
@@ -28,8 +39,7 @@
     animation: fill-in 0.5s ease forwards 1s,
             //    zoom 1.05s ease forwards,
             //    zoom-even-more .75s ease forwards 1.5s,
-               zoom-fixed 1.75s cubic-bezier(.54,.36,1,-0.33) forwards,
-               fade-out 0.25s ease forwards 1.75s;
+               zoom 2s cubic-bezier(.54,.36,1,-0.33) forwards;
 }
 
 // @keyframes zoom{
@@ -38,7 +48,6 @@
 //         width: 75%;
 //     }
 // }
-
 // @keyframes zoom-even-more{
 //     from {
 //         height: 75%;
@@ -49,8 +58,9 @@
 //         width: 250%;
 //     }
 // }
+// ^^I realized i could just use cubic bezier instead (the latter looks smoother too)
 
-@keyframes zoom-fixed{
+@keyframes zoom{
     to {
         height: 250%;
         width: 250%;
@@ -80,7 +90,8 @@
     stroke-linecap: round;
     stroke-dasharray: 989px;
     stroke-dashoffset: 989px;
-    animation: line-anim 1.25s ease forwards,
+    animation: line-anim 1.25s ease forwards;
+            //    rotate 1s linear infinite;
 }
 
 @keyframes line-anim{
@@ -88,3 +99,9 @@
         stroke-dashoffset: 0px;
     }
 }
+
+// @keyframes rotate{ //doesn't work
+//     to {
+//         transform: rotate(360deg);
+//     }
+// }

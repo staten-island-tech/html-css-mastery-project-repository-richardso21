@@ -1,5 +1,54 @@
 .content-blocks{
     background-color: black;
-    height: 100vh;
+    // height: 100vh;
     box-shadow: 0 0 20px black;
+    color: white;
+    padding: 2rem 0;
+    overflow-x: hidden;
+}
+
+.block-culture{
+    h1{
+        text-align: center;
+        font-size: 3rem;
+        margin: 1rem;
+    }
+}    
+
+@media screen and (min-width:900px) {
+    .block-culture{
+        h1{
+            font-size: 6rem;
+        }
+    }
+}
+
+.culture-img-wrap{
+    // width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    img{
+        width: 90%;
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width:900px) {
+    .culture-img-wrap{
+        flex-direction: row;
+        // flex-wrap: wrap;
+        margin: 0 1rem;
+        img{
+            height: 25rem;
+            width: auto;
+            // order: 1;
+        }
+        // img:nth-child(2){
+        //     order: 0;
+        //     align-self: stretch;
+        // }
+    }
 }
