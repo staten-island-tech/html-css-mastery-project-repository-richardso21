@@ -143,6 +143,7 @@ html {
   width: auto;
   min-height: auto;
   z-index: -1;
+  opacity: .9;
 }
 
 .landing-content {
