@@ -39,6 +39,7 @@
 @media screen and (min-width:900px) {
     .culture-img-wrap{
         flex-direction: row;
+        align-items: stretch;
         // flex-wrap: wrap;
         margin: 0 1rem;
         img{
@@ -50,5 +51,22 @@
         //     order: 0;
         //     align-self: stretch;
         // }
+    }
+}
+
+@media screen and (min-width:900px) {
+    .culture-wrap-1{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+@media screen and (min-width:900px) {
+    .culture-wrap-2{
+        img{
+            height: 100vh;
+        }
     }
 }
