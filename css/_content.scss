@@ -24,49 +24,106 @@
 }
 
 .culture-img-wrap{
-    // width: 95%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    margin: 0 auto;
     img{
         width: 90%;
         padding: 1rem;
     }
 }
 
+.culture-wrap-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.culture-wrap-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @media screen and (min-width:900px) {
     .culture-img-wrap{
+        padding: 1rem;
         flex-direction: row;
         align-items: stretch;
-        // flex-wrap: wrap;
-        margin: 0 1rem;
         img{
-            height: 25rem;
-            width: auto;
-            // order: 1;
+            width: 100%;
+            padding: 0rem;
         }
-        // img:nth-child(2){
-        //     order: 0;
-        //     align-self: stretch;
-        // }
     }
 }
 
 @media screen and (min-width:900px) {
     .culture-wrap-1{
-        display: flex;
-        flex-direction: column;
+        padding: 1rem;
+        flex: 1 1 0px;
+        // flex-shrink: 2;
+        justify-content: space-around;
     }
 }
-
-
 
 @media screen and (min-width:900px) {
     .culture-wrap-2{
-        img{
-            height: 100vh;
-        }
+        padding: 1rem;
+        flex-direction: row;
+        align-items: stretch;
+        width: auto;
+        // flex-shrink: 1;
+        flex: 1 1 0px;
     }
 }
+
+
+// .culture-img-wrap{
+//     // width: 95%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-around;
+//     align-items: center;
+//     // margin: 0 auto;
+//     img{
+//         width: 90%;
+//         padding: 1rem;
+//     }
+// }
+
+// @media screen and (min-width:900px) {
+//     .culture-img-wrap{
+//         flex-direction: row;
+//         align-items: stretch;
+//         // flex-wrap: wrap;
+//         margin: 0 1rem;
+//         img{
+//             padding: 0;
+//             max-width: 50%;
+//             // width: auto;
+//             // order: 1;
+//         }
+//         // img:nth-child(2){
+//         //     order: 0;
+//         //     align-self: stretch;
+//         // }
+//     }
+// }
+
+// @media screen and (min-width:900px) {
+//     .culture-wrap-1{
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-evenly;
+//     }
+// }
+
+
+
+// @media screen and (min-width:900px) {
+//     .culture-wrap-2{
+//         img{
+//             height: 100vh;
+//         }
+//     }
+// }
