@@ -1,8 +1,8 @@
 // imports
-@import "_loading.scss";
-@import "_landing.scss";
-@import "_content.scss";
-@import "_nav.scss";
+@import "parts/_loading.scss";
+@import "parts/_landing.scss";
+@import "parts/_content.scss";
+@import "parts/_nav.scss";
 
 
 html::-webkit-scrollbar {
