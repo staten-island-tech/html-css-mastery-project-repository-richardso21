@@ -22,34 +22,14 @@
     // filter: blur(5px);
 }
 
-@media screen and (min-width: 600px) {
-    .landing-video-bg {
-        filter: brightness(60%);
-    }
-}
-
-
 .landing-content{
     height: 100%;
     background: rgba(0, 0, 0, 0.75);
     clip-path: polygon(0px 0px, 100% 0px, 100% 25%, 0% 40%);
 }
 
-@media screen and (min-width: 600px) {
-    .landing-content{
-        clip-path: none;
-        background: none;
-    }
-}
-
 .landing-content-container{
     filter: drop-shadow(-1px 6px 3px black);
-}
-
-@media screen and (min-width: 600px) {
-    .landing-content-container{
-        filter: drop-shadow(0 0 5px black);
-    }
 }
 
 .landing-content p{
@@ -64,6 +44,16 @@
 }
 
 @media screen and (min-width: 600px) {
+    .landing-video-bg {
+        filter: brightness(60%);
+    }
+    .landing-content{
+        clip-path: none;
+        background: none;
+    }
+    .landing-content-container{
+        filter: drop-shadow(0 0 5px black);
+    }
     .landing-content p{
         color: rgba(255, 0, 0, 0.8);
         top: 10%;
