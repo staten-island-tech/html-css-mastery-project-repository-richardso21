@@ -15,6 +15,11 @@
     }
 }
 
+.why-path1 {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+}
+
 @media screen and (min-width:900px) {
     .block-why {
         height: 100vh;
@@ -23,11 +28,16 @@
     .why-head-large {
         display: block;
         flex: 1 1 0px;
-        h1 {
-            font-size: 10rem;
-            margin: 0 0 -4rem 0;
-            padding: -1rem 0;
-            background-clip: text;
+        padding: 2rem 0 0 0;
+        // h1 {
+        //     font-size: 10rem;
+        //     margin: 0 0 -4rem 0;
+        //     padding: -1rem 0;
+        //     background-clip: text;
+        // }
+        svg {
+            width: 100%;
+            height: 35%;
         }
     }
     .why-head-small {
