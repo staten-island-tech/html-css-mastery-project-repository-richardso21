@@ -247,12 +247,10 @@ html {
 
 .content-blocks {
   background-color: black;
+  padding: 0;
   -webkit-box-shadow: 0 0 20px black;
           box-shadow: 0 0 20px black;
   color: white;
-  padding: 2rem 0;
-  width: 100%;
-  height: 100%;
   overflow: hidden;
 }
 
@@ -260,6 +258,10 @@ html {
   text-align: center;
   font-size: 3rem;
   margin: 1rem;
+}
+
+.content-blocks section {
+  padding: 1rem 0 0 0;
 }
 
 @media screen and (min-width: 900px) {
@@ -487,7 +489,7 @@ html {
             flex: 1 1 0px;
     -ms-flex-item-align: end;
         align-self: flex-end;
-    font-size: 2vw;
+    font-size: 2.5vw;
     text-align: end;
   }
 }
