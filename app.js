@@ -13,7 +13,7 @@ function wipes(){
     triggerElement: '.content-blocks',
     triggerHook: 'onLeave'
   })
-  .setPin('.content-blocks')
+  .setPin('.block-why')
   .setTween(wipeAnimation)
   .addIndicators()
   .addTo(controller)
