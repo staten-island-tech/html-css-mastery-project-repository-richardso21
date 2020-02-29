@@ -1,37 +1,54 @@
-// window.onload = function(){
-//   this.welcomefunction();
-// }
-// function welcomefunction() {
-//   // const welcome = document.querySelectorAll(".welcome-intro path");
-//   // // console.log(welcome);
-//   const welcome = document.querySelectorAll(".why-dynamic path");
-//   console.log(welcome);
-//   for (let i = 0; i < welcome.length; i++) {
-//     console.log(`Letter ${i} is ${welcome[i].getTotalLength()}`);
-//   }}
+if (window.innerWidth >= 900) { //check if it's mobile
+  
+  var controller = new ScrollMagic.Controller()
+  
+  dynamicTitle(".why-dynamic path", "why-dynamic");
+  dynamicTitle(".culture-dynamic path", ".culture-dynamic");
+  dynamicTitle(".food-dynamic path", ".food-dynamic")
+  dynamicTitle(".conv-dynamic path", ".conv-dynamic")
+  
+  function dynamicTitle(cssItem, triggerItem) {
+    // set stroke dash length for all letters first
+    // removes need to input values to style sheet manually
+    const elems = document.querySelectorAll(cssItem);
+    for (let i = 0; i < elems.length; i++) {
+      elems[i].style.strokeDashoffset = `${elems[i].getTotalLength()}px`;
+      elems[i].style.strokeDasharray = `${elems[i].getTotalLength()}px`;
+    }
+  
+    // add gsap timeline animation
+    const tween = new TimelineMax()
+    .add(TweenMax.to(cssItem, 1, {strokeDashoffset:0, ease:Linear.easeNone}))
+    .add(TweenMax.to(cssItem, .25, {fill:'white'}), 0.75)
+  
+    // hookup to scrollmagic controller
+    var scene = new ScrollMagic.Scene({
+      triggerElement: triggerItem, 
+      duration: "60%", 
+      tweenChanges: true, 
+      triggerHook: 1})
+        .setTween(tween)
+        .addTo(controller);
+  }
+  
+  setParallax(".parallax1");
+  setParallax(".parallax3");
+  setParallax(".parallax4");
+  setParallax(".parallax5");
+  // setParallax(".parallax2");
 
-// Letter 0 is 422.51px
-// Letter 1 is 293.90px
-// Letter 2 is 216.07px
-// Letter 3 is 183.45px
-// Letter 4 is 254.51px
-// Letter 5 is 225.63px
-// Letter 6 is 254.51px
-// Letter 7 is 307.03px
-// Letter 8 is 220.42px
+  function setParallax(elem) {
+    new ScrollMagic.Scene({triggerElement: elem, triggerHook: 'onEnter', duration: '200%'})
+            .setTween(elem +" > div", {y: "50%", ease: Linear.easeNone})
+            // .addIndicators()
+            .addTo(controller);
 
-// ===========================================
-
-var controller = new ScrollMagic.Controller();
-
-const tween = new TimelineMax()
-.add(TweenMax.to('.why-dynamic path', 1, {strokeDashoffset:0, ease:Linear.easeNone}))
-.add(TweenMax.to('.why-dynamic path', .25,{fill:'white'}),0.75);
-
-var scene = new ScrollMagic.Scene({triggerElement: ".why-dynamic", duration: "60%", tweenChanges: true, triggerHook: 1})
-          .setTween(tween)
-          .addIndicators() 
+  };
+  
+  new ScrollMagic.Scene({triggerElement: ".parallax2", triggerHook: 'onEnter', duration: '250%'})
+          .setTween(".parallax2 > div", {y: "30%", ease: Linear.easeNone})
+          // .addIndicators()
           .addTo(controller);
 
-// ==========================================
+}  
 

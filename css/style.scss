@@ -5,6 +5,7 @@
 @import "parts/_nav.scss";
 @import "parts/_culture.scss";
 @import "parts/_why.scss";
+@import "parts/_food.scss";
 
 
 html::-webkit-scrollbar {
@@ -28,4 +29,16 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
     // overflow-y: hidden;
+}
+
+.dynamic {
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: 10vw;
+    path{
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: transparent;
+    }
 }

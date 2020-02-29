@@ -21,6 +21,13 @@
 }
 
 @media screen and (min-width:900px) {
+    .culture-dynamic{
+        display: block;
+    }
+    .block-culture h1{
+        display: none;
+    }
+
     .culture-img-wrap{
         padding: 1rem;
         flex-direction: row;

@@ -35,30 +35,9 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    // z-index: 2;
     animation: fill-in 0.5s ease forwards 1s,
-            //    zoom 1.05s ease forwards,
-            //    zoom-even-more .75s ease forwards 1.5s,
                zoom 2s cubic-bezier(.54,.36,1,-0.33) forwards;
 }
-
-// @keyframes zoom{
-//     to {
-//         height: 75%;
-//         width: 75%;
-//     }
-// }
-// @keyframes zoom-even-more{
-//     from {
-//         height: 75%;
-//         width: 75%;
-//     }
-//     to {
-//         height: 250%;
-//         width: 250%;
-//     }
-// }
-// ^^I realized i could just use cubic bezier instead (the latter looks smoother too)
 
 @keyframes zoom{
     to {
@@ -91,7 +70,6 @@ html{
     stroke-dasharray: 989px;
     stroke-dashoffset: 989px;
     animation: line-anim 1.25s ease forwards;
-            //    rotate 1s linear infinite;
 }
 
 @keyframes line-anim{
@@ -100,8 +78,3 @@ html{
     }
 }
 
-// @keyframes rotate{ //doesn't work
-//     to {
-//         transform: rotate(360deg);
-//     }
-// }
