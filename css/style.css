@@ -247,17 +247,21 @@ html {
 
 .content-blocks {
   background-color: black;
+  padding: 0;
   -webkit-box-shadow: 0 0 20px black;
           box-shadow: 0 0 20px black;
   color: white;
-  padding: 2rem 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .content-blocks h1 {
   text-align: center;
   font-size: 3rem;
   margin: 1rem;
+}
+
+.content-blocks section {
+  padding: 1rem 0 0 0;
 }
 
 @media screen and (min-width: 900px) {
@@ -457,6 +461,57 @@ html {
   margin: 0;
 }
 
+.why-dynamic path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: transparent;
+}
+
+.why-dynamic path:nth-child(1) {
+  stroke-dashoffset: 422.52px;
+  stroke-dasharray: 422.52px;
+}
+
+.why-dynamic path:nth-child(2) {
+  stroke-dashoffset: 293.90px;
+  stroke-dasharray: 293.90px;
+}
+
+.why-dynamic path:nth-child(3) {
+  stroke-dashoffset: 216.07px;
+  stroke-dasharray: 216.07px;
+}
+
+.why-dynamic path:nth-child(4) {
+  stroke-dashoffset: 183.45px;
+  stroke-dasharray: 183.45px;
+}
+
+.why-dynamic path:nth-child(5) {
+  stroke-dashoffset: 254.51px;
+  stroke-dasharray: 254.51px;
+}
+
+.why-dynamic path:nth-child(6) {
+  stroke-dashoffset: 225.63px;
+  stroke-dasharray: 225.63px;
+}
+
+.why-dynamic path:nth-child(7) {
+  stroke-dashoffset: 254.51px;
+  stroke-dasharray: 254.51px;
+}
+
+.why-dynamic path:nth-child(8) {
+  stroke-dashoffset: 307.03px;
+  stroke-dasharray: 307.03px;
+}
+
+.why-dynamic path:nth-child(9) {
+  stroke-dashoffset: 220.42px;
+  stroke-dasharray: 220.42px;
+}
+
 @media screen and (min-width: 900px) {
   .block-why {
     height: 100vh;
@@ -469,12 +524,11 @@ html {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 0px;
             flex: 1 1 0px;
+    padding: 2rem 0 0 0;
   }
-  .why-head-large h1 {
-    font-size: 10rem;
-    margin: 0 0 -4rem 0;
-    padding: -1rem 0;
-    background-clip: text;
+  .why-head-large svg {
+    width: 100%;
+    height: 35%;
   }
   .why-head-small {
     display: none;
@@ -485,7 +539,7 @@ html {
             flex: 1 1 0px;
     -ms-flex-item-align: end;
         align-self: flex-end;
-    font-size: 2vw;
+    font-size: 2.5vw;
     text-align: end;
   }
 }

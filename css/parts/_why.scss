@@ -15,6 +15,51 @@
     }
 }
 
+.why-dynamic {
+    path{
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: transparent;
+        // transition: fill 0.5s ease;
+    }
+    path:nth-child(1){
+        stroke-dashoffset: 422.52px;
+        stroke-dasharray: 422.52px;
+    }
+    path:nth-child(2){
+        stroke-dashoffset: 293.90px;
+        stroke-dasharray: 293.90px;
+    }
+    path:nth-child(3){
+        stroke-dashoffset: 216.07px;
+        stroke-dasharray: 216.07px;
+    }
+    path:nth-child(4){
+        stroke-dashoffset: 183.45px;
+        stroke-dasharray: 183.45px;
+    }
+    path:nth-child(5){
+        stroke-dashoffset: 254.51px;
+        stroke-dasharray: 254.51px;
+    }
+    path:nth-child(6){
+        stroke-dashoffset: 225.63px;
+        stroke-dasharray: 225.63px;
+    }
+    path:nth-child(7){
+        stroke-dashoffset: 254.51px;
+        stroke-dasharray: 254.51px;
+    }
+    path:nth-child(8){
+        stroke-dashoffset: 307.03px;
+        stroke-dasharray: 307.03px;
+    }
+    path:nth-child(9){
+        stroke-dashoffset: 220.42px;
+        stroke-dasharray: 220.42px;
+    }
+}
+
 @media screen and (min-width:900px) {
     .block-why {
         height: 100vh;
@@ -23,11 +68,10 @@
     .why-head-large {
         display: block;
         flex: 1 1 0px;
-        h1 {
-            font-size: 10rem;
-            margin: 0 0 -4rem 0;
-            padding: -1rem 0;
-            background-clip: text;
+        padding: 2rem 0 0 0;
+        svg {
+            width: 100%;
+            height: 35%;
         }
     }
     .why-head-small {
@@ -36,7 +80,7 @@
     .because {
         flex: 1 1 0px;
         align-self: flex-end;
-        font-size: 2vw;
+        font-size: 2.5vw;
         text-align: end;
     }
 }
