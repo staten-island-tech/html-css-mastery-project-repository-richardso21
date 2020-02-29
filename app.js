@@ -19,31 +19,31 @@
 // wipes();
 // =======================================
 
-// window.onload = function(){
-//   this.welcomefunction();
-// }
+window.onload = function(){
+  this.welcomefunction();
+}
 
-// function welcomefunction() {
-//   // const welcome = document.querySelectorAll(".welcome-intro path");
-//   // // console.log(welcome);
-//   const welcome = document.querySelectorAll(".why-dynamic path");
-//   console.log(welcome);
-//   for (let i = 0; i < welcome.length; i++) {
-//     console.log(`Letter ${i} is ${welcome[i].getTotalLength()}`);
-//   }}
+function welcomefunction() {
+  // const welcome = document.querySelectorAll(".welcome-intro path");
+  // // console.log(welcome);
+  const welcome = document.querySelectorAll(".why-path1");
+  console.log(welcome);
+  for (let i = 0; i < welcome.length; i++) {
+    console.log(`Letter ${i} is ${welcome[i].getTotalLength()}`);
+  }}
 
 // Letter 0 is 2000.1795654296875
 // Letter 1 is 3178.713134765625
 
 // ===========================================
 
-var controller = new ScrollMagic.Controller();
+// var controller = new ScrollMagic.Controller();
 
-var tween = new TimelineMax()
-  .add(TweenMax.to(".why-path1", 1, {strokeDashoffset: 0, ease:Linear.easeNone}));
+// var tween = new TimelineMax()
+//   .add(TweenMax.to(".why-path1", 1, {strokeDashoffset: 0, ease:Linear.easeNone}));
 
-var scene = new ScrollMagic.Scene({triggerElement: ".content-blocks", duration: 100, tweenChanges: true, triggerHook: 'onLeave'})
-          .setTween(tween)
-          .addIndicators() // add indicators (requires plugin)
-          .addTo(controller);
+// var scene = new ScrollMagic.Scene({triggerElement: ".content-blocks", duration: 200, tweenChanges: true, triggerHook: 1})
+//           .setTween(tween)
+//           .addIndicators() // add indicators (requires plugin)
+//           .addTo(controller);
 
