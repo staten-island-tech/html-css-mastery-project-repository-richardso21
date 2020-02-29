@@ -22,14 +22,16 @@
 
 // ===========================================
 
-// var controller = new ScrollMagic.Controller();
+var controller = new ScrollMagic.Controller();
 
-// var t1 = new gsap.timeline()
-//   .to(".why-dynamic path", {strokeDashoffset: 0, duration: 1});
+const tween = new TimelineMax()
+.add(TweenMax.to('.why-dynamic path', 1, {strokeDashoffset:0, ease:Linear.easeNone}))
+.add(TweenMax.to('.why-dynamic path', .25,{fill:'white'}),0.75);
 
-// var scene = new ScrollMagic.Scene({triggerElement: ".content-blocks", duration: "75%", tweenChanges: true, triggerHook: 1})
-//           .setTween(t1)
-//           .addIndicators() 
-//           .addTo(controller);
+var scene = new ScrollMagic.Scene({triggerElement: ".why-dynamic", duration: "60%", tweenChanges: true, triggerHook: 1})
+          .setTween(tween)
+          .addIndicators() 
+          .addTo(controller);
 
 // ==========================================
+

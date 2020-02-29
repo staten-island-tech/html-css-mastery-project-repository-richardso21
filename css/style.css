@@ -464,6 +464,7 @@ html {
 .why-dynamic path {
   stroke-linecap: round;
   stroke-linejoin: round;
+  fill: transparent;
 }
 
 .why-dynamic path:nth-child(1) {
