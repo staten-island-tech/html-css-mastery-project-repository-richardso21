@@ -22,8 +22,8 @@ html {
   width: 100%;
   z-index: 2;
   background: black;
-  -webkit-animation: fade-out 1s ease forwards 2s, box-none 0s ease forwards 3s;
-          animation: fade-out 1s ease forwards 2s, box-none 0s ease forwards 3s;
+  -webkit-animation: fade-out 1s ease forwards 2s, box-none 0s ease forwards 3s;
+          animation: fade-out 1s ease forwards 2s, box-none 0s ease forwards 3s;
 }
 
 @-webkit-keyframes box-none {
@@ -199,8 +199,8 @@ html {
   display: block;
   width: 30px;
   height: 30px;
-  border-bottom: 5px solid #FF0000;
-  border-right: 5px solid #FF0000;
+  border-bottom: 5px solid #ff0000;
+  border-right: 5px solid #ff0000;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   margin: -10px;
@@ -425,7 +425,8 @@ html {
           transform: translate3d(0%, 0%, 0);
 }
 
-.culture-bg a:link, a:visited {
+.culture-bg a:link,
+a:visited {
   width: 100%;
   color: #cd0101;
   text-decoration: none;
@@ -591,19 +592,24 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .dynamic {
-  display: block;
-  margin: auto;
-  width: 90%;
-  height: 10vw;
+  display: none;
 }
 
-.dynamic path {
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: transparent;
+@media screen and (min-width: 900px) {
+  .dynamic {
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: 10vw;
+  }
+  .dynamic path {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: transparent;
+  }
 }
 /*# sourceMappingURL=style.css.map */
