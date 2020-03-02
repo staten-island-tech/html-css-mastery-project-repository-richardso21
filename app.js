@@ -1,6 +1,6 @@
 if (window.innerWidth >= 900) { //check if it's mobile
 
-  var controller = new ScrollMagic.Controller()
+  var controller1 = new ScrollMagic.Controller();  
 
   dynamicTitle(".why-dynamic path", "why-dynamic");
   dynamicTitle(".culture-dynamic path", ".culture-dynamic");
@@ -29,27 +29,23 @@ if (window.innerWidth >= 900) { //check if it's mobile
       triggerHook: 1
     })
       .setTween(tween)
-      .addTo(controller);
+      .addTo(controller1);
   }
 
+  var controller2 = new ScrollMagic.Controller();
+
   setParallax(".parallax1");
+  setParallax(".parallax2");
   setParallax(".parallax3");
   setParallax(".parallax4");
   setParallax(".parallax5");
-  // setParallax(".parallax2");
 
   function setParallax(elem) {
     new ScrollMagic.Scene({ triggerElement: elem, triggerHook: 'onEnter', duration: '200%' })
-      .setTween(elem + " > div", { y: "50%", ease: Linear.easeNone })
-      // .addIndicators()
-      .addTo(controller);
-
+      .setTween(elem + " > div", { y: "-50%", ease: Power0.easeNone })
+      .addTo(controller2);
   };
 
-  new ScrollMagic.Scene({ triggerElement: ".parallax2", triggerHook: 'onEnter', duration: '250%' })
-    .setTween(".parallax2 > div", { y: "30%", ease: Linear.easeNone })
-    // .addIndicators()
-    .addTo(controller);
 }
 
 // TOTO look at example codepen
