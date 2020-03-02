@@ -52,3 +52,4 @@ if (window.innerWidth >= 900) { //check if it's mobile
     .addTo(controller);
 }
 
+// TOTO look at example codepen
