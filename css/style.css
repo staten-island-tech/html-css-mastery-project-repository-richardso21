@@ -135,7 +135,6 @@ html {
 }
 
 .landing-video-bg {
-  background-color: black;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -273,8 +272,8 @@ html {
 .nav {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 @media screen and (min-width: 900px) {
@@ -317,37 +316,40 @@ html {
   margin-top: 2rem;
 }
 
-.nav-icon::before, .nav-icon::after {
-  content: '';
+.nav-icon::before,
+.nav-icon::after {
+  content: "";
 }
 
 .nav-icon::before {
   position: absolute;
-  top: -.4rem;
+  top: -0.4rem;
   left: 0;
 }
 
 .nav-icon::after {
   position: absolute;
-  top: .4rem;
+  top: 0.4rem;
   left: 0;
 }
 
-.nav-icon, .nav-icon::before, .nav-icon::after {
+.nav-icon,
+.nav-icon::before,
+.nav-icon::after {
   width: 1.5rem;
   height: 2px;
   background-color: black;
   display: inline-block;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .nav-button:hover .nav-icon::before {
-  top: -.5rem;
+  top: -0.5rem;
 }
 
 .nav-button:hover .nav-icon::after {
-  top: .5rem;
+  top: 0.5rem;
 }
 
 .nav-checkbox:checked + .nav-button .nav-icon {
@@ -386,11 +388,11 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: .75rem 0;
+  margin: 0.75rem 0;
 }
 
 .nav-list li a {
-  padding: .75rem 0;
+  padding: 0.75rem 0;
   visibility: hidden;
   opacity: 0;
   display: -webkit-box;
@@ -401,12 +403,13 @@ html {
       -ms-flex-direction: row;
           flex-direction: row;
   pointer-events: all;
-  -webkit-transition: all .25s ease;
-  transition: all .25s ease;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
   text-transform: uppercase;
 }
 
-.nav-list li a:link, .nav-list li a:visited {
+.nav-list li a:link,
+.nav-list li a:visited {
   color: red;
   text-decoration: none;
 }
@@ -416,22 +419,34 @@ html {
           transform: scale(0);
   height: 1.5rem;
   margin: 0 1.3rem;
-  -webkit-transition: -webkit-transform .2s ease;
-  transition: -webkit-transform .2s ease;
-  transition: transform .2s ease;
-  transition: transform .2s ease, -webkit-transform .2s ease;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 
 .nav-list li span {
-  padding: 0 0 0 .5rem;
+  margin: 0 0 0 0.5rem;
   font-weight: 800;
   text-decoration: none;
   -webkit-transform: translateX(50px);
           transform: translateX(50px);
-  -webkit-transition: -webkit-transform .2s ease-out;
-  transition: -webkit-transform .2s ease-out;
-  transition: transform .2s ease-out;
-  transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+}
+
+.nav-list li span:before, .nav-list li span:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 0px;
+  height: 2px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+  background-color: red;
 }
 
 .nav-list li:nth-child(1) span {
@@ -491,8 +506,8 @@ html {
   background-color: transparent;
   z-index: 1;
   pointer-events: none;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .nav-checkbox:checked ~ .nav-button {
@@ -504,17 +519,12 @@ html {
 .nav-checkbox:checked ~ .nav-outer-bg {
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .nav-checkbox:checked ~ .nav-wrap .nav-list li a {
   visibility: visible;
   opacity: 1;
-}
-
-.nav-checkbox:checked ~ .nav-wrap .nav-list li a:hover img {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
 }
 
 .nav-checkbox:checked ~ .nav-wrap .nav-list li a img {
@@ -525,6 +535,11 @@ html {
 .nav-checkbox:checked ~ .nav-wrap .nav-list li a span {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
+}
+
+.nav-checkbox:checked ~ .nav-wrap .nav-list li a:hover span::before, .nav-checkbox:checked ~ .nav-wrap .nav-list li a:hover span::after {
+  width: 100%;
+  opacity: 1;
 }
 
 .culture-img-wrap {
@@ -835,6 +850,7 @@ a:visited {
 
 .about {
   width: 100%;
+  min-height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -871,9 +887,9 @@ a:visited {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .text {
     text-align: center;
