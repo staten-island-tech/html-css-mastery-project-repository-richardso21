@@ -270,6 +270,25 @@ html {
   }
 }
 
+.nav {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+@media screen and (min-width: 900px) {
+  .nav {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.nav.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
 .nav-checkbox {
   display: none;
 }
@@ -350,22 +369,122 @@ html {
 .nav-wrap {
   position: fixed;
   padding: 4.5rem 0 0 0;
-  z-index: 1;
+  z-index: 2;
+  pointer-events: none;
 }
 
-.nav-wrap ul {
+.nav-list {
   list-style: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: .75rem 0;
 }
 
-.nav-wrap ul li {
-  margin: 1.5rem 0;
+.nav-list li a {
+  padding: .75rem 0;
+  visibility: hidden;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  pointer-events: all;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+  text-transform: uppercase;
 }
 
-.nav-checkbox:checked ~ .nav-button {
-  height: 16rem;
+.nav-list li a:link, .nav-list li a:visited {
+  color: red;
+  text-decoration: none;
 }
 
-.test {
+.nav-list li img {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  height: 1.5rem;
+  margin: 0 1.3rem;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+}
+
+.nav-list li span {
+  padding: 0 0 0 .5rem;
+  font-weight: 800;
+  text-decoration: none;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  -webkit-transition: -webkit-transform .2s ease-out;
+  transition: -webkit-transform .2s ease-out;
+  transition: transform .2s ease-out;
+  transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+}
+
+.nav-list li:nth-child(1) span {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.nav-list li:nth-child(2) span {
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
+}
+
+.nav-list li:nth-child(3) span {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.nav-list li:nth-child(4) span {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+
+.nav-list li:nth-child(5) span {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.nav-list li:nth-child(1) img {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.nav-list li:nth-child(2) img {
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
+}
+
+.nav-list li:nth-child(3) img {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.nav-list li:nth-child(4) img {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+
+.nav-list li:nth-child(5) img {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.nav-outer-bg {
   position: fixed;
   height: 100%;
   width: 100%;
@@ -376,10 +495,36 @@ html {
   transition: all .5s;
 }
 
-.nav-checkbox:checked ~ .test {
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.25);
+.nav-checkbox:checked ~ .nav-button {
+  height: 16rem;
+  -webkit-box-shadow: 0 0 5rem black;
+          box-shadow: 0 0 5rem black;
+}
+
+.nav-checkbox:checked ~ .nav-outer-bg {
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-checkbox:checked ~ .nav-wrap .nav-list li a {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-checkbox:checked ~ .nav-wrap .nav-list li a:hover img {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.nav-checkbox:checked ~ .nav-wrap .nav-list li a img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.nav-checkbox:checked ~ .nav-wrap .nav-list li a span {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
 }
 
 .culture-img-wrap {
@@ -695,6 +840,7 @@ html::-webkit-scrollbar {
 html {
   scrollbar-width: none;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {

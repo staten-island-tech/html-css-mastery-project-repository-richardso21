@@ -46,6 +46,32 @@ if (window.innerWidth >= 900) { //check if it's mobile
       .addTo(controller2);
   };
 
+} else {
+  var controller3 = new ScrollMagic.Controller();
+  
+  new ScrollMagic.Scene({
+    triggerElement: '.content-blocks',
+    triggerHook: 0.2,
+  })
+  .setClassToggle('.nav','visible')
+  .addIndicators()
+  .addTo(controller3)
 }
 
-// TOTO look at example codepen
+// auto-close nav after clicking link
+nav = document.getElementById('nav-toggle')
+
+document.querySelectorAll('.nav-list li a').forEach(item => {
+  item.addEventListener('click',toggler);
+})
+
+function toggler() {
+  if(nav.checked == false) {
+    nav.checked = true; 
+  }
+  else {
+    if(nav.checked == true) {
+        nav.checked = false; 
+    }
+  }
+}

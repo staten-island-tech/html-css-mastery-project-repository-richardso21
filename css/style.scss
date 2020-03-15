@@ -14,6 +14,7 @@ html::-webkit-scrollbar {
 html {
   scrollbar-width: none; //for firefox
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 // .master{
