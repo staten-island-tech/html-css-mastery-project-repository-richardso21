@@ -54,7 +54,7 @@ if (window.innerWidth >= 900) { //check if it's mobile
     triggerHook: 0.2,
   })
   .setClassToggle('.nav','visible')
-  .addIndicators()
+  // .addIndicators()
   .addTo(controller3)
 }
 

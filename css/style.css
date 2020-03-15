@@ -496,7 +496,7 @@ html {
 }
 
 .nav-checkbox:checked ~ .nav-button {
-  height: 16rem;
+  height: 19rem;
   -webkit-box-shadow: 0 0 5rem black;
           box-shadow: 0 0 5rem black;
 }
@@ -830,6 +830,53 @@ a:visited {
   }
   .food-large {
     display: block;
+  }
+}
+
+.about {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-color: black;
+  color: white;
+}
+
+.text {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 28px;
+  padding: 0 1rem;
+  text-align: end;
+  width: 100%;
+}
+
+#passion {
+  color: red;
+  padding: 0;
+}
+
+@media screen and (min-width: 900px) {
+  .about {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .text {
+    text-align: center;
   }
 }
 
