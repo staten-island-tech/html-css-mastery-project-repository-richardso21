@@ -270,6 +270,118 @@ html {
   }
 }
 
+.nav-checkbox {
+  display: none;
+}
+
+.nav-button {
+  position: fixed;
+  z-index: 2;
+  top: 2rem;
+  left: 2rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50px;
+  background: rgba(255, 0, 0, 0.9);
+  -webkit-box-shadow: 0 0 2rem black;
+          box-shadow: 0 0 2rem black;
+  cursor: pointer;
+  -webkit-transition: height 0.2s, -webkit-box-shadow 0.2s;
+  transition: height 0.2s, -webkit-box-shadow 0.2s;
+  transition: height 0.2s, box-shadow 0.2s;
+  transition: height 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  text-align: center;
+}
+
+.nav-icon {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.nav-icon::before, .nav-icon::after {
+  content: '';
+}
+
+.nav-icon::before {
+  position: absolute;
+  top: -.4rem;
+  left: 0;
+}
+
+.nav-icon::after {
+  position: absolute;
+  top: .4rem;
+  left: 0;
+}
+
+.nav-icon, .nav-icon::before, .nav-icon::after {
+  width: 1.5rem;
+  height: 2px;
+  background-color: black;
+  display: inline-block;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.nav-button:hover .nav-icon::before {
+  top: -.5rem;
+}
+
+.nav-button:hover .nav-icon::after {
+  top: .5rem;
+}
+
+.nav-checkbox:checked + .nav-button .nav-icon {
+  background-color: transparent;
+}
+
+.nav-checkbox:checked + .nav-button .nav-icon::before {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  top: 0;
+}
+
+.nav-checkbox:checked + .nav-button .nav-icon::after {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  top: 0;
+}
+
+.nav-wrap {
+  position: fixed;
+  padding: 4.5rem 0 0 0;
+  z-index: 1;
+}
+
+.nav-wrap ul {
+  list-style: none;
+}
+
+.nav-wrap ul li {
+  margin: 1.5rem 0;
+}
+
+.nav-checkbox:checked ~ .nav-button {
+  height: 16rem;
+}
+
+.test {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1;
+  pointer-events: none;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.nav-checkbox:checked ~ .test {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
 .culture-img-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
